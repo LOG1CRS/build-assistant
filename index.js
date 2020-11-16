@@ -1,1 +1,7 @@
-console.log('Hello World with build-assistant');
+'use strict';
+
+const runningMessage = require('./core/runningMessage');
+const buildAssistant = require('./core/buildAssistant');
+
+runningMessage();
+buildAssistant();
