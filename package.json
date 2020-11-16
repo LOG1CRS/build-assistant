@@ -1,0 +1,20 @@
+{
+  "name": "build-assistant",
+  "version": "0.0.1",
+  "description": "Npm module thought for automate the control of files when building the project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LOG1CRS/build-assitant.git"
+  },
+  "keywords": [],
+  "author": "LOG1CRS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LOG1CRS/build-assitant/issues"
+  },
+  "homepage": "https://github.com/LOG1CRS/build-assitant#readme"
+}
