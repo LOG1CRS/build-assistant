@@ -1,8 +1,9 @@
 {
   "name": "build-assistant",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Npm module thought for automate the control of files when building the project",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start": "node index.js"
   },

@@ -1,21 +1,16 @@
 'use strict';
 
-const fs = require('fs');
-const chalk = require('chalk');
+const getBuilderFile = require('./getBuilderFile');
+const useParams = require('../cli/useParams');
 
 const buildAssistant = () => {
-  try {
-    const file = fs.readFileSync('builder.json', 'utf-8');
-    const builderSettings = JSON.parse(file);
-    console.log(builderSettings);
-  } catch (err) {
-    console.error(
-      chalk.red(
-        'builder.json file not found, please create the file with the steps to follow to build your project'
-      )
-    );
-    console.error(err);
+  const file = getBuilderFile();
+
+  if (!file) {
+    return;
   }
+
+  const config = useParams();
 };
 
 module.exports = buildAssistant;
