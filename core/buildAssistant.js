@@ -10,7 +10,9 @@ const buildAssistant = () => {
     return;
   }
 
-  const config = useParams();
+  const userConfig = useParams();
+
+  console.log(userConfig);
 };
 
 module.exports = buildAssistant;

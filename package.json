@@ -1,6 +1,6 @@
 {
   "name": "build-assistant",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Npm module thought for automate the control of files when building the project",
   "main": "index.js",
   "bin": "index.js",
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "console-clear": "^1.1.1",
     "figlet": "^1.5.0",
     "ora": "^5.1.0"
   }
