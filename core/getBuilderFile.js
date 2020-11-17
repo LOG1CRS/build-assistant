@@ -1,8 +1,15 @@
 'use strict';
 
+/**
+ * Module dependencies.
+ */
+
 const fs = require('fs');
 const chalk = require('chalk');
 
+/**
+ * Gets the builder.json file at the root of the project.
+ */
 const getBuilderFile = () => {
   try {
     const file = fs.readFileSync('builder.json', 'utf-8');

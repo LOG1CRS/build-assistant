@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-
 'use strict';
 
-const runningMessage = require('./core/runningMessage');
+/**
+ * Code starts.
+ */
+
 const buildAssistant = require('./core/buildAssistant');
 
-runningMessage();
 buildAssistant();
