@@ -33,7 +33,7 @@ const configVerification = (config, userConfig) => {
  */
 const getConfig = (param, userConfig) => {
   if (!param.startsWith('--') && configVerification('command: ', userConfig)) {
-    userConfig.push(`command: ${param}`);
+    userConfig.push(`build: ${param}`);
   }
 
   if (param === '--no-delete' && configVerification('noDelete: ', userConfig)) {
