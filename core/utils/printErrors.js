@@ -16,22 +16,25 @@ const printErrors = (type) => {
     case 1:
       console.error(
         chalk.red(
-          '--> builder.json file not found, please create the file with the steps to follow to build your project'
+          '--> builder.json file not found, please create the file with the steps to follow in the root of the project.'
         )
       );
       break;
     case 2:
       console.error(
         chalk.red(
-          '--> There was an error running your build command, add the correct build command and try again.'
+          '--> There was an error running your build command, please add the correct build command.'
         )
       );
       break;
     default:
-      console.error(chalk.red('--> An error has occurred, try again later.'));
+      console.error(
+        chalk.red(
+          '--> Build-assistant execution terminated unexpectedly, please try to fix the errors and try again.'
+        )
+      );
       break;
   }
-  console.log(' ');
 };
 
 module.exports = printErrors;

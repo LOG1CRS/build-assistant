@@ -4,32 +4,21 @@
  * Module dependencies.
  */
 
-const runningMessage = require('./runningMessage');
-const getBuilderFile = require('./getBuilderFile');
-const printErrors = require('./printErrors');
-const useParams = require('../cli/useParams');
-const runBuildCommand = require('./runBuildCommand');
+const runBuildCommand = require('./tools/runBuildCommand');
+const printError = require('./utils/printErrors');
 
 /**
  * Manages the entire flow of the code.
  */
-const buildAssistant = async () => {
-  runningMessage();
-
-  const file = getBuilderFile();
-
-  if (!file) {
-    printErrors(1);
-    return;
-  }
-
-  const userConfig = useParams();
-  const runSuccessfully = await runBuildCommand(userConfig);
+const buildAssistant = async (file, userConfig) => {
+  const runSuccessfully = await runBuildCommand(file.build_command);
 
   if (!runSuccessfully) {
-    printErrors(2);
-    return;
+    printError(2);
+    return false;
   }
+
+  return true;
 };
 
 module.exports = buildAssistant;

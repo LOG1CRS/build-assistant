@@ -1,4 +1,4 @@
 {
-  "name": "LOG1C",
-  "file_type": "test"
+  "build_command": "npm run tes",
+  "build_folder": "./build"
 }
