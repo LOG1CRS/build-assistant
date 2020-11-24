@@ -1,4 +1,18 @@
 {
-  "build_command": "npm run tes",
-  "build_folder": "./build"
+  "build_command": "npm run test",
+  "build_folder": "./build",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "move"
+    },
+    {
+      "step": 2,
+      "tool": "delete"
+    },
+    {
+      "step": 3,
+      "tool": "run_build"
+    }
+  ]
 }

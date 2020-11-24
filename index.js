@@ -12,7 +12,8 @@ const useParams = require('./cli/useParams');
 const buildAssistant = require('./core/buildAssistant');
 
 /**
- * Manages the entire flow of the code.
+ * The Build starts here with a message, then gets the builder.json file
+ * and gets the cli params to be able to call the assistant function.
  */
 const index = async () => {
   runningMessage();
@@ -26,7 +27,6 @@ const index = async () => {
   }
 
   const userConfig = useParams();
-  console.log(userConfig);
 
   const runAssistantCorrectly = await buildAssistant(file, userConfig);
 
